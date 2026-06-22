@@ -40,6 +40,9 @@ pygmentsUseClasses = true
   # 全站启用数学公式渲染（KaTeX）；配合下方 goldmark passthrough
   math = true
 
+  # 文章页启用评论（giscus，见 [params.giscus]）
+  comments = true
+
   [params.homeInfoParams]
     Title = "Hi 👋"
     Content = "求学德国的足迹与技术笔记。内容横跨中文 / Deutsch / English。"
@@ -51,6 +54,20 @@ pygmentsUseClasses = true
   [params.assets]
     disableHLJS = true
     # favicon = "/favicon.ico"   # 放一个 static/favicon.ico 后再启用
+
+  # giscus 评论（基于 GitHub Discussions）
+  # 下面 4 个值从 https://giscus.app 配置页复制（安装 giscus App 并开启 Discussions 后生成）
+  [params.giscus]
+    repo = "wiekern/blog"
+    repoId = "REPLACE_WITH_data-repo-id"
+    category = "Announcements"
+    categoryId = "REPLACE_WITH_data-category-id"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lang = "zh-CN"
 
 # ----------------------------------------------------------------------
 # 导航菜单
