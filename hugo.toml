@@ -59,9 +59,9 @@ pygmentsUseClasses = true
   # 下面 4 个值从 https://giscus.app 配置页复制（安装 giscus App 并开启 Discussions 后生成）
   [params.giscus]
     repo = "wiekern/blog"
-    repoId = "REPLACE_WITH_data-repo-id"
+    repoId = "R_kgDOTBjz2g"
     category = "Announcements"
-    categoryId = "REPLACE_WITH_data-category-id"
+    categoryId = "DIC_kwDOTBjz2s4C_pbp"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
