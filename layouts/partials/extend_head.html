@@ -1,0 +1,4 @@
+{{- /* 当页面或全站参数 math 为真时，注入 KaTeX 渲染 */ -}}
+{{ if .Param "math" }}
+{{ partial "math.html" . }}
+{{ end }}

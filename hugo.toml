@@ -1,0 +1,107 @@
+baseURL = "https://aixup.de/"
+title = "wiekern"
+theme = "PaperMod"
+
+defaultContentLanguage = "zh"
+locale = "zh-cn"
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+enableEmoji = true
+
+pygmentsUseClasses = true
+
+[pagination]
+  pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+# ----------------------------------------------------------------------
+# PaperMod 参数
+# ----------------------------------------------------------------------
+[params]
+  env = "production"
+  description = "wiekern 的个人博客 · 求学德国 · 技术笔记"
+  author = "wiekern"
+  defaultTheme = "auto"        # auto / light / dark
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowWordCount = true
+  hidemeta = false
+  showtoc = true
+
+  # 全站启用数学公式渲染（KaTeX）；配合下方 goldmark passthrough
+  math = true
+
+  [params.homeInfoParams]
+    Title = "Hi 👋"
+    Content = "求学德国的足迹与技术笔记。内容横跨中文 / Deutsch / English。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/wiekern"
+
+  [params.assets]
+    disableHLJS = true
+    favicon = "/favicon.ico"
+
+# ----------------------------------------------------------------------
+# 导航菜单
+# ----------------------------------------------------------------------
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 30
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 40
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 50
+
+# ----------------------------------------------------------------------
+# Markdown / 数学公式
+# ----------------------------------------------------------------------
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true          # 允许正文中的原始 HTML（图片等）
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "github"
+
+# 搜索（fuse.js）需要 JSON 输出
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
