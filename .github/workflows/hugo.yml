@@ -44,6 +44,9 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          # 若仓库尚未启用 Pages，自动启用为 GitHub Actions 源（避免首次 404）
+          enablement: true
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
