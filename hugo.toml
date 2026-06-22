@@ -1,4 +1,4 @@
-baseURL = "https://aixup.de/"
+baseURL = "https://blog.aixup.de/"
 title = "wiekern"
 theme = "PaperMod"
 
@@ -50,7 +50,7 @@ pygmentsUseClasses = true
 
   [params.assets]
     disableHLJS = true
-    favicon = "/favicon.ico"
+    # favicon = "/favicon.ico"   # 放一个 static/favicon.ico 后再启用
 
 # ----------------------------------------------------------------------
 # 导航菜单
